@@ -42,16 +42,32 @@ const createList = () => {
   ulbook.innerHTML = '';
   for (let i = 0; i < list.List.length; i += 1) {
     const newLi = document.createElement('li');
+    newLi.className += 'row';
     newLi.innerHTML = ` 
-        <p>${list.List[i].title}</p>
-        <p>${list.List[i].author}</p>
-        <button id="remove${i}">Remove Book</button>
+        <p class='col-5'>${list.List[i].title}</p>
+        <p class='col-5'>${list.List[i].author}</p>
+        <button class="removeBtn col-2" id="remove${i}">Remove</button>
         `;
+    if (i % 2 === 0) {
+      newLi.className += ' books1';
+    }
     ulbook.appendChild(newLi);
   }
 };
 
-createList();
+const emptyList = () => {
+  if (list.List.length === 0) {
+    createList();
+    const ulPlaceholder = document.createElement('p');
+    ulPlaceholder.innerHTML = 'Please Add a Book to the List';
+    ulPlaceholder.setAttribute('id', 'ul-placeholder');
+    ulbook.appendChild(ulPlaceholder);
+  } else {
+    createList();
+  }
+};
+
+emptyList();
 
 const eventLoop = () => {
   const removeBtn = document.querySelectorAll('li button');
@@ -60,17 +76,52 @@ const eventLoop = () => {
       const id = t.target.id.slice((t.target.id.length - 1), t.target.id.length);
       list.removeBook(id);
       saveLocalstorage();
-      createList();
+      emptyList();
       eventLoop();
     });
   });
 };
 
-submit.addEventListener('click', () => {
-  list.newBook(title.value, author.value);
-  saveLocalstorage();
-  createList();
-  eventLoop();
+const requireInputs = () => {
+  if ((title.value.trim() === '') && (author.value.trim() === '')) {
+    title.className += ' error';
+    author.className += ' error';
+    return false;
+  }
+
+  if (title.value.trim() === '') {
+    title.className += ' error';
+    return false;
+  }
+
+  if (author.value.trim() === '') {
+    author.className += ' error';
+    return false;
+  }
+  return true;
+};
+
+title.addEventListener('change', () => {
+  if (title.value.trim() !== '') {
+    title.classList.remove('error');
+  }
+});
+
+author.addEventListener('change', () => {
+  if (author.value.trim() !== '') {
+    author.classList.remove('error');
+  }
+});
+
+submit.addEventListener('click', (event) => {
+  if (requireInputs()) {
+    list.newBook(title.value, author.value);
+    saveLocalstorage();
+    createList();
+    eventLoop();
+  } else {
+    event.preventDefault();
+  }
 });
 
 eventLoop();

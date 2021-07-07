@@ -1,3 +1,59 @@
 * {
+  font-family: 'Comic Neue', cursive;
+}
+
+ul {
+  list-style-type: none;
+  border: 2px solid black;
+  width: 1000px;
+  min-height: 50px;
+  max-height: 500px;
+  overflow: auto;
+}
+
+#ul-placeholder {
+  font-size: 30px;
+  margin-top: 25px;
+}
+
+.books1 {
+  background-color: gray;
+  color: white;
+}
+
+li {
+  width: 100%;
+  border-bottom: 1px solid grey;
   font-size: 20px;
+}
+
+.margin-left {
+  margin-left: 40%;
+  font-size: 25px;
+}
+
+.margin-left2 {
+  margin-left: 2%;
+  font-size: 25px;
+}
+
+#ulBooks {
+  padding: 0;
+}
+
+form {
+  font-size: 20px;
+}
+
+.removeBtn {
+  border-radius: 10px;
+  background-color: #ff7675;
+}
+
+.removeBtn:hover {
+  background-color: #d63031;
+}
+
+form input.error {
+  border-color: red;
 }
