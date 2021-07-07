@@ -17,8 +17,8 @@ ul {
 }
 
 .books1 {
-   background-color: gray;
-   color: white;
+  background-color: gray;
+  color: white;
 }
 
 li {
@@ -28,9 +28,10 @@ li {
 }
 
 .margin-left {
- margin-left: 40%;
- font-size: 25px;
+  margin-left: 40%;
+  font-size: 25px;
 }
+
 .margin-left2 {
   margin-left: 2%;
   font-size: 25px;
@@ -47,8 +48,6 @@ form {
 .removeBtn {
   border-radius: 10px;
   background-color: #ff7675;
-  /* width: 100px!important ; */
-  /* margin-left: 65px; */
 }
 
 .removeBtn:hover {

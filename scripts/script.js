@@ -86,42 +86,42 @@ const requireInputs = () => {
   if ((title.value.trim() === '') && (author.value.trim() === '')) {
     title.className += ' error';
     author.className += ' error';
-    console.log("Title and Author are required")
-    return false
-  } else if (title.value.trim() === '') {
-    title.className += ' error';
-    console.log("empty title")
-    return false
-  } else if (author.value.trim() === '') {
-    author.className += ' error';
-    console.log("empty author")
-    return false
+    return false;
   }
-  return true
-}
+
+  if (title.value.trim() === '') {
+    title.className += ' error';
+    return false;
+  }
+
+  if (author.value.trim() === '') {
+    author.className += ' error';
+    return false;
+  }
+  return true;
+};
 
 title.addEventListener('change', () => {
-  if (title.value.trim() != '') {
-    title.classList.remove('error')
+  if (title.value.trim() !== '') {
+    title.classList.remove('error');
   }
-})
+});
 
 author.addEventListener('change', () => {
-  if (author.value.trim() != '') {
-    author.classList.remove('error')
+  if (author.value.trim() !== '') {
+    author.classList.remove('error');
   }
-})
+});
 
 submit.addEventListener('click', (event) => {
-    if (requireInputs()) {
-      list.newBook(title.value, author.value);
-      saveLocalstorage();
-      createList();
-      eventLoop();
-    } else {
-      event.preventDefault();
-    }
-
+  if (requireInputs()) {
+    list.newBook(title.value, author.value);
+    saveLocalstorage();
+    createList();
+    eventLoop();
+  } else {
+    event.preventDefault();
+  }
 });
 
 eventLoop();
