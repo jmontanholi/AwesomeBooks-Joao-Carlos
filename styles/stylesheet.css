@@ -54,3 +54,7 @@ form {
 .removeBtn:hover {
   background-color: #d63031;
 }
+
+form input.error {
+  border-color: red;
+}

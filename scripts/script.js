@@ -82,11 +82,46 @@ const eventLoop = () => {
   });
 };
 
-submit.addEventListener('click', () => {
-  list.newBook(title.value, author.value);
-  saveLocalstorage();
-  createList();
-  eventLoop();
+const requireInputs = () => {
+  if ((title.value.trim() === '') && (author.value.trim() === '')) {
+    title.className += ' error';
+    author.className += ' error';
+    console.log("Title and Author are required")
+    return false
+  } else if (title.value.trim() === '') {
+    title.className += ' error';
+    console.log("empty title")
+    return false
+  } else if (author.value.trim() === '') {
+    author.className += ' error';
+    console.log("empty author")
+    return false
+  }
+  return true
+}
+
+title.addEventListener('change', () => {
+  if (title.value.trim() != '') {
+    title.classList.remove('error')
+  }
+})
+
+author.addEventListener('change', () => {
+  if (author.value.trim() != '') {
+    author.classList.remove('error')
+  }
+})
+
+submit.addEventListener('click', (event) => {
+    if (requireInputs()) {
+      list.newBook(title.value, author.value);
+      saveLocalstorage();
+      createList();
+      eventLoop();
+    } else {
+      event.preventDefault();
+    }
+
 });
 
 eventLoop();
