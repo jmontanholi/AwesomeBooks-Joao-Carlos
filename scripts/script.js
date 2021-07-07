@@ -45,9 +45,12 @@ const createList = () => {
     newLi.innerHTML = ` 
         <p>${list.List[i].title}</p>
         <p>${list.List[i].author}</p>
-        <button id="remove${i}">Remove Book</button>
+        <button class="removeBtn" id="remove${i}">Remove Book</button>
         `;
-    ulbook.appendChild(newLi);
+        if (i%2 ==0) {
+          newLi.className += "books1"
+        }
+        ulbook.appendChild(newLi);
   }
 };
 

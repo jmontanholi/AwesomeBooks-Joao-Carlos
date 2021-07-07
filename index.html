@@ -15,23 +15,18 @@
 <body class="d-flex justify-content-center">
     <div class="mt-5 border d-flex flex-column align-items-center">
         <h1>All Awesome Books</h1>
-        <div class="d-flex justify-content-around me-5 fw-bold align-self-stretch">
-            <p>Title</p>
-            <p class="me-5">Author</p>
+        <div class="d-flex fw-bold align-self-stretch">
+            <p class="margin-left2">Title</p>
+            <p class="margin-left">Author</p>
         </div>
         <ul id="ulBooks" class="d-flex flex-column align-items-center">
-            <li>
-                <p>title</p>
-                <p>author</p>
-                <button>Remove Book</button>
-            </li>
         </ul>
         <form class="d-flex flex-column align-items-center">
-            <input type="text" id="title" name="title" size="20" placeholder="Title">
+            <input type="text" id="title" name="title" size="20" placeholder="Title" >
             <br>
-            <input type="text" id="author" name="author" size="20" placeholder="Author">
+            <input class="my-2"type="text" id="author" name="author" size="20" placeholder="Author">
             <br>
-            <input type="submit" id="submit" value="Submit">
+            <input class="align-self-end" type="submit" id="submit" value="Add" >
         </form>
     </div>
     <script src="./scripts/script.js"></script>
