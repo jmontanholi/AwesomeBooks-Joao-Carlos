@@ -1,3 +1,27 @@
 * {
-  font-size: 20px;
+  font-family: 'Comic Neue', cursive;
+}
+
+ul {
+  list-style-type: none;
+  border: 2px solid black;
+  width: 1000px;
+  min-height: 300px;
+}
+
+.books1 {
+  color: green;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  margin: 20px 0 20px 0;
+  font-size: 25px;
+  border: 1px solid green;
+}
+
+.books2 {
+
 }
