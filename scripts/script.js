@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable max-classes-per-file */
 const submit = document.getElementById('submit');
 const title = document.getElementById('title');
@@ -126,11 +127,7 @@ submit.addEventListener('click', (event) => {
 
 eventLoop();
 
-const clockSelector = document.getElementById('clock')
-const test = luxon.DateTime
+const clockSelector = document.getElementById('clock');
+const test = luxon.DateTime;
 const dt = luxon.DateTime.now();
-
-clockSelector.innerHTML= ` 
-  ${dt.toLocaleString(test.DATETIME_MED)}
-`
-
+clockSelector.innerHTML = `${dt.toLocaleString(test.DATETIME_MED)}`;

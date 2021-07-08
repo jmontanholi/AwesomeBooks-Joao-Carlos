@@ -13,7 +13,7 @@
     <title>Awesome Books</title>
 </head>
 <body>
-    <header class="border border-dark">
+    <header class="nav-bar border-bottom border-dark">
         <nav class="d-flex justify-content-between align-items-center border">
             <h1 class="ms-5">Awesome Books</h1>
             <div class="me-5">
@@ -25,14 +25,16 @@
     </header>
     <h5 class="me-5" id="clock"></h5>
     <div class="mt-5 d-flex flex-column align-items-center">
-        <h1>All Awesome Books</h1>
-        <div class="d-flex fw-bold align-self-stretch">
-            <p class="margin-left2">Title</p>
-            <p class="margin-left">Author</p>
+        <div class="d-grid">
+            <h1 class="list-title">All Awesome Books</h1>
+            <div class="d-flex fw-bold align-self-stretch">
+                <p class="margin-left2">Title</p>
+                <p class="margin-left">Author</p>
+            </div>
+            <ul id="ulBooks" class="d-flex flex-column align-items-center">
+            </ul>
         </div>
-        <ul id="ulBooks" class="d-flex flex-column align-items-center">
-        </ul>
-        <form class="d-flex flex-column align-items-center">
+        <form class="d-none flex-column align-items-center">
             <input type="text" id="title" name="title" size="20" placeholder="Title" >
             <br>
             <input class="my-2" type="text" id="author" name="author" size="20" placeholder="Author">
@@ -40,6 +42,18 @@
             <input class="align-self-end" type="submit" id="submit" value="Add" >
         </form>
     </div>
+    <footer class="d-flex justify-content-between align-items-center border-top border-dark">
+        <p class="my-0 ms-5 fw-bold">Copyright © 2021</p>
+        <a class='footer-link fw-bold' href="https://github.com/jmontanholi/AwesomeBooks-Joao-Carlos/blob/awesomeBooks_navigation/MIT.md">MIT license</a>
+        <div class="d-flex">
+            <div class="me-5 d-flex align-items-center fw-bold">
+                <p class="m-0">João Vítor Montanholi Nunes</p>
+            </div>
+            <div class="me-5 d-flex align-items-center fw-bold">
+                <p class="m-0">Carlos Ospina</p>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/luxon@1.27.0/build/global/luxon.min.js"></script>
     <script src="./scripts/script.js"></script>
 </body>
