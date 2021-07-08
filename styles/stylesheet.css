@@ -31,7 +31,7 @@ html {
   margin-bottom: 25px;
 }
 
-ul {
+#ulBooks {
   list-style-type: none;
   border: 2px solid black;
   width: 1000px;
@@ -50,11 +50,11 @@ ul {
   color: white;
 }
 
-li {
+/* li {
   width: 100%;
   border-bottom: 1px solid grey;
   font-size: 20px;
-}
+} */
 
 .margin-left {
   margin-left: 20%;
@@ -106,4 +106,20 @@ footer {
 
 .footer-link:hover {
   color: white;
+}
+
+.contact {
+  width: 500px;
+  border-radius: 10px;
+  border: 3px solid #d63031;
+}
+
+.contact-link{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.contact-link:hover {
+  color: #d63031;
 }
