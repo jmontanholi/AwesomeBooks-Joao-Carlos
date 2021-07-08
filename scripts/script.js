@@ -125,3 +125,12 @@ submit.addEventListener('click', (event) => {
 });
 
 eventLoop();
+
+const clockSelector = document.getElementById('clock')
+const test = luxon.DateTime
+const dt = luxon.DateTime.now();
+
+clockSelector.innerHTML= ` 
+  ${dt.toLocaleString(test.DATETIME_MED)}
+`
+

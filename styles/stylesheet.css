@@ -69,3 +69,7 @@ form {
 form input.error {
   border-color: red;
 }
+
+#clock {
+  text-align: right;
+}
