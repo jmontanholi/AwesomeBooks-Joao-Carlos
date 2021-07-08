@@ -20,15 +20,15 @@
         <nav class="d-flex justify-content-between align-items-center border">
             <h1 class="ms-5">Awesome Books</h1>
             <div class="me-5">
-                <a class='nav-links' href="#">List</a>
-                <a class='nav-links middle-link' href="#">Add Book</a>
-                <a class='nav-links' href="#">Contact</a>
+                <a class='nav-links' href="#" id="list-link">List</a>
+                <a class='nav-links middle-link' href="#" id="add-link">Add Book</a>
+                <a class='nav-links' href="#" id="contact-link">Contact</a>
             </div>
         </nav>
     </header>
     <h5 class="me-5" id="clock"></h5>
     <div class="mt-5 d-flex flex-column align-items-center">
-        <div class="d-none">
+        <div class="d-grid" id="list">
             <h1 class="list-title">All Awesome Books</h1>
             <div class="d-flex fw-bold align-self-stretch">
                 <p class="margin-left2">Title</p>
@@ -37,14 +37,14 @@
             <ul id="ulBooks" class="d-flex flex-column align-items-center">
             </ul>
         </div>
-        <form class="d-none flex-column align-items-center">
+        <form class="d-none flex-column align-items-center" id="form">
             <input type="text" id="title" name="title" size="20" placeholder="Title">
             <br>
             <input class="my-2" type="text" id="author" name="author" size="20" placeholder="Author">
             <br>
             <input class="align-self-end" type="submit" id="submit" value="Add">
         </form>
-        <div class="text-center">
+        <div class="d-none text-center" id="contact">
             <h1>Contact Information</h1>
             <p>Do you have any questions or you just want to say "Hello"?</p>
             <p>You can reach out to us!</p>

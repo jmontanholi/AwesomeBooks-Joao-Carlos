@@ -50,11 +50,11 @@ html {
   color: white;
 }
 
-/* li {
+.books {
   width: 100%;
   border-bottom: 1px solid grey;
   font-size: 20px;
-} */
+}
 
 .margin-left {
   margin-left: 20%;
