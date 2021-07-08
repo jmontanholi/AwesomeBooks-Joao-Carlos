@@ -71,7 +71,8 @@ html {
 }
 
 form {
-  font-size: 20px;
+  font-size: 30px;
+  margin-top: 10%;
 }
 
 .removeBtn {
@@ -122,4 +123,29 @@ footer {
 
 .contact-link:hover {
   color: #d63031;
+}
+
+#title {
+  box-shadow: 2px 2px 2px black;
+  border-radius: 10px;
+}
+
+#author {
+  box-shadow: 2px 2px 2px black;
+  border-radius: 10px;
+}
+
+#submit {
+  background-color: #ff7675;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px black;
+}
+
+#submit:hover {
+  background-color: #d63031;
+  box-shadow: 1px 1px 1px black;
+}
+
+#contact {
+  font-size: 25px;
 }

@@ -4,13 +4,12 @@ const submit = document.getElementById('submit');
 const title = document.getElementById('title');
 const author = document.getElementById('author');
 const ulbook = document.getElementById('ulBooks');
-const listLink = document.getElementById('list-link')
-const addLink = document.getElementById('add-link')
-const contactLink = document.getElementById('contact-link')
-const listDiv = document.getElementById('list')
-const formDiv = document.getElementById('form')
-const contactDiv = document.getElementById('contact')
-
+const listLink = document.getElementById('list-link');
+const addLink = document.getElementById('add-link');
+const contactLink = document.getElementById('contact-link');
+const listDiv = document.getElementById('list');
+const formDiv = document.getElementById('form');
+const contactDiv = document.getElementById('contact');
 
 class Book {
   constructor(title, author) {
@@ -142,27 +141,27 @@ const dt = luxon.DateTime.now();
 clockSelector.innerHTML = `${dt.toLocaleString(test.DATETIME_MED)}`;
 
 listLink.addEventListener('click', () => {
-  listDiv.classList.remove('d-none')
-  listDiv.classList.add('d-grid')
-  formDiv.classList.remove('d-flex')
-  formDiv.classList.add('d-none')
-  contactDiv.classList.remove('d-grid')
-  contactDiv.classList.add('d-none')
+  listDiv.classList.remove('d-none');
+  listDiv.classList.add('d-grid');
+  formDiv.classList.remove('d-flex');
+  formDiv.classList.add('d-none');
+  contactDiv.classList.remove('d-grid');
+  contactDiv.classList.add('d-none');
 });
 
 addLink.addEventListener('click', () => {
-  listDiv.classList.remove('d-grid')
-  listDiv.classList.add('d-none')
-  formDiv.classList.remove('d-none')
-  formDiv.classList.add('d-flex')
-  contactDiv.classList.remove('d-grid')
-  contactDiv.classList.add('d-none')
+  listDiv.classList.remove('d-grid');
+  listDiv.classList.add('d-none');
+  formDiv.classList.remove('d-none');
+  formDiv.classList.add('d-flex');
+  contactDiv.classList.remove('d-grid');
+  contactDiv.classList.add('d-none');
 });
 contactLink.addEventListener('click', () => {
-  listDiv.classList.remove('d-grid')
-  listDiv.classList.add('d-none')
-  formDiv.classList.remove('d-flex')
-  formDiv.classList.add('d-none')
-  contactDiv.classList.remove('d-none')
-  contactDiv.classList.add('d-grid')
+  listDiv.classList.remove('d-grid');
+  listDiv.classList.add('d-none');
+  formDiv.classList.remove('d-flex');
+  formDiv.classList.add('d-none');
+  contactDiv.classList.remove('d-none');
+  contactDiv.classList.add('d-grid');
 });
