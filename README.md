@@ -17,7 +17,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://rawcdn.githack.com/jmontanholi/AwesomeBooks-Joao-Carlos/17877c0fd8e78d28656543dc5a315fb3f1ddbb1c/index.html)
+[Live Demo Link](https://jmontanholi.github.io/AwesomeBooks-Joao-Carlos/)
 
 
 ## Getting Started
