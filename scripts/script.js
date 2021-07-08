@@ -78,7 +78,7 @@ const emptyList = () => {
 
 emptyList();
 
-const eventLoop = () => {
+const removeBtnListeners = () => {
   const removeBtn = document.querySelectorAll('li button');
   removeBtn.forEach((e) => {
     e.addEventListener('click', (t) => {
@@ -86,7 +86,7 @@ const eventLoop = () => {
       list.removeBook(id);
       saveLocalstorage();
       emptyList();
-      eventLoop();
+      removeBtnListeners();
     });
   });
 };
@@ -127,13 +127,13 @@ submit.addEventListener('click', (event) => {
     list.newBook(title.value, author.value);
     saveLocalstorage();
     createList();
-    eventLoop();
+    removeBtnListeners();
   } else {
     event.preventDefault();
   }
 });
 
-eventLoop();
+removeBtnListeners();
 
 const clockSelector = document.getElementById('clock');
 const test = luxon.DateTime;
@@ -157,6 +157,7 @@ addLink.addEventListener('click', () => {
   contactDiv.classList.remove('d-grid');
   contactDiv.classList.add('d-none');
 });
+
 contactLink.addEventListener('click', () => {
   listDiv.classList.remove('d-grid');
   listDiv.classList.add('d-none');
