@@ -1,8 +1,16 @@
+/* eslint-disable no-undef */
 /* eslint-disable max-classes-per-file */
 const submit = document.getElementById('submit');
 const title = document.getElementById('title');
 const author = document.getElementById('author');
 const ulbook = document.getElementById('ulBooks');
+const listLink = document.getElementById('list-link');
+const addLink = document.getElementById('add-link');
+const contactLink = document.getElementById('contact-link');
+const listDiv = document.getElementById('list');
+const formDiv = document.getElementById('form');
+const contactDiv = document.getElementById('contact');
+
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -43,6 +51,7 @@ const createList = () => {
   for (let i = 0; i < list.List.length; i += 1) {
     const newLi = document.createElement('li');
     newLi.className += 'row';
+    newLi.className += ' books';
     newLi.innerHTML = ` 
         <p class='col-5'>${list.List[i].title}</p>
         <p class='col-5'>${list.List[i].author}</p>
@@ -69,7 +78,7 @@ const emptyList = () => {
 
 emptyList();
 
-const eventLoop = () => {
+const removeBtnListeners = () => {
   const removeBtn = document.querySelectorAll('li button');
   removeBtn.forEach((e) => {
     e.addEventListener('click', (t) => {
@@ -77,7 +86,7 @@ const eventLoop = () => {
       list.removeBook(id);
       saveLocalstorage();
       emptyList();
-      eventLoop();
+      removeBtnListeners();
     });
   });
 };
@@ -118,10 +127,42 @@ submit.addEventListener('click', (event) => {
     list.newBook(title.value, author.value);
     saveLocalstorage();
     createList();
-    eventLoop();
+    removeBtnListeners();
   } else {
     event.preventDefault();
   }
 });
 
-eventLoop();
+removeBtnListeners();
+
+const clockSelector = document.getElementById('clock');
+const test = luxon.DateTime;
+const dt = luxon.DateTime.now();
+clockSelector.innerHTML = `${dt.toLocaleString(test.DATETIME_MED)}`;
+
+listLink.addEventListener('click', () => {
+  listDiv.classList.remove('d-none');
+  listDiv.classList.add('d-grid');
+  formDiv.classList.remove('d-flex');
+  formDiv.classList.add('d-none');
+  contactDiv.classList.remove('d-grid');
+  contactDiv.classList.add('d-none');
+});
+
+addLink.addEventListener('click', () => {
+  listDiv.classList.remove('d-grid');
+  listDiv.classList.add('d-none');
+  formDiv.classList.remove('d-none');
+  formDiv.classList.add('d-flex');
+  contactDiv.classList.remove('d-grid');
+  contactDiv.classList.add('d-none');
+});
+
+contactLink.addEventListener('click', () => {
+  listDiv.classList.remove('d-grid');
+  listDiv.classList.add('d-none');
+  formDiv.classList.remove('d-flex');
+  formDiv.classList.add('d-none');
+  contactDiv.classList.remove('d-none');
+  contactDiv.classList.add('d-grid');
+});

@@ -3,7 +3,13 @@
 # Project Awesome Books
 
 > Awesome Books in JavaScript is a practice project, which includes the user input functionality and managing the dynamically DOM manipulation with Local Storage. We used Javascript, HTML5, CSS3.
+
+> Home Page
 ![screenshot](./app_screenshot.png)
+> Form Page
+![screenshot](./app_screenshot2.png)
+> Contact us Page
+![screenshot](./app_screenshot3.png)
 
 Additional description about the project and its features.
 
@@ -17,7 +23,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://rawcdn.githack.com/jmontanholi/AwesomeBooks-Joao-Carlos/17877c0fd8e78d28656543dc5a315fb3f1ddbb1c/index.html)
+[Live Demo Link](https://jmontanholi.github.io/AwesomeBooks-Joao-Carlos/)
 
 
 ## Getting Started
@@ -28,6 +34,7 @@ To get a local copy up and running follow these simple example steps.
 - Browser
 - Text Editor (VSCode is suggested.)
 - Git installed 
+- Its recommended to have a screen resolution equal or greater than 1280*720p as the project is not meant to be responsive.
 
 ### Setup
 - Open Terminal
